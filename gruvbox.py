@@ -23,9 +23,9 @@ from pygments.token import (  # type: ignore
     Token,
 )
 
-__author__ = "Reilly Tucker Siemens"
-__email__ = "reilly@tuckersiemens.com"
-__version__ = "1.0.0"
+__author__: str = "Reilly Tucker Siemens"
+__email__: str = "reilly@tuckersiemens.com"
+__version__: str = "1.0.0"
 
 
 @dataclass(frozen=True)
