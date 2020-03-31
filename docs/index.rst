@@ -13,6 +13,14 @@ Release v\ |release|. (:ref:`Changelog <changelog>`)
     :target: https://coveralls.io/github/reillysiemens/ipython-style-gruvbox
     :alt: Coveralls code coverage
 
+.. image:: https://img.shields.io/badge/license-ISC-purple?style=flat-square
+    :target: https://github.com/reillysiemens/ipython-style-gruvbox/blob/master/LICENSE
+    :alt: License
+
+.. image:: https://img.shields.io/github/v/release/reillysiemens/ipython-style-gruvbox?style=flat-square
+    :target: https://github.com/reillysiemens/ipython-style-gruvbox/releases/latest
+    :alt: Latest release
+
 .. image:: https://img.shields.io/badge/code%20style-black-black?style=flat-square
     :target: https://github.com/psf/black
     :alt: Any color you like
