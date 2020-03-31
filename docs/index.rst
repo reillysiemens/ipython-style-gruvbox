@@ -5,8 +5,8 @@ IPython Style Gruvbox
 
 Release v\ |release|. (:ref:`Changelog <changelog>`)
 
-.. image:: https://img.shields.io/github/workflow/status/reillysiemens/ipython-style-gruvbox/Tests/master.svg?style=flat-square&label=tests
-    :target: https://github.com/reillysiemens/ipython-style-gruvbox/actions?query=workflow%3ATests
+.. image:: https://img.shields.io/github/workflow/status/reillysiemens/ipython-style-gruvbox/Test/master.svg?style=flat-square&label=tests
+    :target: https://github.com/reillysiemens/ipython-style-gruvbox/actions?query=workflow%3ATest
     :alt: GitHub Actions test status
 
 .. image:: https://img.shields.io/coveralls/github/reillysiemens/ipython-style-gruvbox/master?style=flat-square
