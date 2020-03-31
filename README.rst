@@ -13,7 +13,56 @@ IPython Style Gruvbox
     :target: https://github.com/psf/black
     :alt: Any color you like
 
-An opinionated terminal colorscheme for IPython using gruvbox colors.
+An opinionated terminal colorscheme for IPython using `gruvbox`_ colors.
 
 .. image:: docs/static/ipython-style-gruvbox.png
     :alt: IPython Style Gruvbox
+
+Installation
+------------
+
+The ``ipython-style-gruvbox`` package is not currently published to `PyPI`_
+because of its highly opinionated, personal nature. If, however, you still
+wish to install this package, the following steps *should* work to install the
+`latest release`_.
+
+.. code-block:: bash
+
+    repo='https://github.com/reillysiemens/ipython-style-gruvbox'
+
+    # Find the latest release.
+    latest=$(git ls-remote --tags --refs $repo | # Fetch remote tags.
+                     sort -t '/' -k 3 -V |       # Sort them by version.
+                     tail -n 1 |                 # Take the latest one.
+                     awk -F / '{print $3}')      # Return only the tag.
+
+    # Craft the URL for the release asset.
+    version=$(echo $latest | tr -d 'v')  # Remove the leading v.
+    wheel="ipython_style_gruvbox-${version}-py3-none-any.whl"
+    release="${repo}/releases/download/${latest}/${wheel}"
+
+    # Install the release.
+    pip install $release
+
+Usage
+-----
+
+The style installs itself as a `Pygments plugin`_, so after
+installation you should only need to launch IPython with the ``gruvbox`` style
+
+.. code-block:: bash
+
+   ipython --TerminalInteractiveShell.highlighting_style=gruvbox
+
+or add it to your `IPython config`_.
+
+.. code-block:: python
+
+   config = get_config()
+   config.TerminalInteractiveShell.highlighting_style = "gruvbox"
+
+.. _gruvbox: https://github.com/morhetz/gruvbox
+.. _PyPI: https://pypi.org/
+.. _latest release: https://github.com/reillysiemens/ipython-style-gruvbox/releases/latest
+.. _Pygments plugin: https://pygments.org/docs/plugins/#entrypoints
+.. _IPython config: https://ipython.readthedocs.io/en/stable/config/intro.html
