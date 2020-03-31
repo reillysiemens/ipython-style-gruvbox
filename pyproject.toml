@@ -6,8 +6,27 @@ build-backend = "poetry.masonry.api"
 name = "ipython-style-gruvbox"
 version = "1.0.0"
 description = "An opinionated terminal colorscheme for IPython using gruvbox colors."
-authors = ["Reilly Tucker Siemens <reilly@tuckersiemens.com>"]
 license = "ISC"
+authors = ["Reilly Tucker Siemens <reilly@tuckersiemens.com>"]
+readme = "README.rst"
+homepage = "https://github.com/reillysiemens/ipython-style-gruvbox"
+repository = "https://github.com/reillysiemens/ipython-style-gruvbox"
+keywords = ["ipython", "pygments-style", "gruvbox"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Framework :: IPython",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: ISC License (ISCL)",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: POSIX :: BSD :: FreeBSD",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development",
+    "Topic :: Religion",
+]
 packages = [
     { include = "gruvbox.py" },
 ]
