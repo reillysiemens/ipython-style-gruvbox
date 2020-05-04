@@ -73,6 +73,10 @@ or add it to your `IPython config`_.
    config = get_config()
    config.TerminalInteractiveShell.highlighting_style = "gruvbox"
 
+*Note:* This will only affect your syntax highlighting. If you're looking to
+create a prompt that looks exactly like the one in the image above this
+`example prompt`_ might help.
+
 Project Info
 ------------
 
@@ -88,3 +92,4 @@ Project Info
 .. _latest release: https://github.com/reillysiemens/ipython-style-gruvbox/releases/latest
 .. _Pygments plugin: https://pygments.org/docs/plugins/#entrypoints
 .. _IPython config: https://ipython.readthedocs.io/en/stable/config/intro.html
+.. _example prompt: https://github.com/reillysiemens/dotfiles/blob/8994f69f23271aa93d83e81032542f17b38423fd/.ipython/profile_default/ipython_config.py
