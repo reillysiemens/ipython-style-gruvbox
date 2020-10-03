@@ -13,6 +13,10 @@ IPython Style Gruvbox
     :target: https://github.com/reillysiemens/ipython-style-gruvbox/blob/master/LICENSE
     :alt: License
 
+.. image:: https://img.shields.io/badge/python-3.8%20|%203.9-blue?style=flat-square
+   :target: https://www.python.org/downloads/
+   :alt: Python versions
+
 .. image:: https://img.shields.io/github/v/release/reillysiemens/ipython-style-gruvbox?style=flat-square
     :target: https://github.com/reillysiemens/ipython-style-gruvbox/releases/latest
     :alt: Latest release
