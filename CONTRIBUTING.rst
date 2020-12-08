@@ -8,7 +8,7 @@ Repository Management
 
 - Fork this project into your own repository.
 - Follow the `version control`_ guidelines.
-- No changes should reach the ``master`` branch except by way of a
+- No changes should reach the ``main`` branch except by way of a
   `pull request`_.
 
 Submitting Issues

@@ -1,16 +1,16 @@
 IPython Style Gruvbox
 =====================
 
-.. image:: https://img.shields.io/github/workflow/status/reillysiemens/ipython-style-gruvbox/Test/master.svg?style=flat-square&label=tests
+.. image:: https://img.shields.io/github/workflow/status/reillysiemens/ipython-style-gruvbox/Test/main.svg?style=flat-square&label=tests
     :target: https://github.com/reillysiemens/ipython-style-gruvbox/actions?query=workflow%3ATest
     :alt: GitHub Actions test status
 
-.. image:: https://img.shields.io/coveralls/github/reillysiemens/ipython-style-gruvbox/master?style=flat-square
+.. image:: https://img.shields.io/coveralls/github/reillysiemens/ipython-style-gruvbox/main?style=flat-square
     :target: https://coveralls.io/github/reillysiemens/ipython-style-gruvbox
     :alt: Coveralls code coverage
 
 .. image:: https://img.shields.io/badge/license-ISC-purple?style=flat-square
-    :target: https://github.com/reillysiemens/ipython-style-gruvbox/blob/master/LICENSE
+    :target: https://github.com/reillysiemens/ipython-style-gruvbox/blob/main/LICENSE
     :alt: License
 
 .. image:: https://img.shields.io/badge/python-3.8%20|%203.9-blue?style=flat-square
