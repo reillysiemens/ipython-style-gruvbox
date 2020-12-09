@@ -46,18 +46,16 @@ Handling Pull Requests
 
 - A maintainer will respond to Pull Requests with one of:
 
-  - 'Ship It', 'LGTM', 🚢, or some other affirmation
+  - ``Ship It``, ``LGTM``, 🚢, or some other affirmation
   - What must be changed
   - Won't accept and why
 
-Nota Bene
-+++++++++
-
-- Submitting a `draft pull request`_ is a good way to get feedback from
-  maintainers if you are unsure of the changes you are making.
-- A pull request that has been approved may not be merged immediately.
-- You may be asked to rebase or squash your commits to keep an orderly version
-  control history.
+.. note::
+   - Submitting a `draft pull request`_ is a good way to get feedback from
+     maintainers if you are unsure about your changes.
+   - A pull request that has been approved may not be merged immediately.
+   - You may be asked to rebase or squash your commits to keep an orderly version
+     control history.
 
 .. _version control:
 
@@ -97,14 +95,18 @@ repository's `tox`_ configuration. To validate your coding style run
 Test Environment
 ~~~~~~~~~~~~~~~~
 
-- Code **must** be tested. Write or update related unit tests so you don't have
-  to manually retest the same thing many times.
+- Code **must** be tested. Write or update related unit tests to avoid repeated
+  manual testing.
 - Tests for this project are written using the `pytest`_ framework and executed
-  via `tox`_. While it isn't always achievable this project strives to maintain
-  💯% test coverage.
-- In addition to unit testing code in this project is statically type checked
-  using `mypy`_, formatted with `black`_, linted using `flake8`_, and security
-  checked with `bandit`_.
+  via `tox`_.
+- While it isn't always achievable this project strives to maintain 💯% test
+  coverage.
+- In addition to unit testing code in this project is
+
+  - statically type checked using `mypy`_
+  - formatted with `black`_
+  - linted using `flake8`_
+  - and security checked with `bandit`_
 
 Here are some example invocations for running unit tests/static analysis.
 

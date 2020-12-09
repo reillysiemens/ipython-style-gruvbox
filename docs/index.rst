@@ -77,14 +77,13 @@ or add it to your `IPython config`_.
    config = get_config()
    config.TerminalInteractiveShell.highlighting_style = "gruvbox"
 
-*Note:* This will only affect your syntax highlighting. If you're looking to
-create a prompt that looks exactly like the one in the image above this
-`example prompt`_ might help.
-
-Project Info
-------------
+.. note::
+   This will only affect your syntax highlighting. If you're looking to
+   create a prompt that looks exactly like the one in the image above this
+   `example prompt`_ might help.
 
 .. toctree::
+   :hidden:
    :maxdepth: 1
 
    Code of Conduct <code-of-conduct>

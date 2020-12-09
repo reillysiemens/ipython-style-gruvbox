@@ -96,8 +96,9 @@ commands =
 [testenv:docs]
 basepython = python3.9
 deps =
-    sphinx ~= 2.3.0
+    sphinx ~= 3.3.0
     sphinx-autodoc-typehints ~= 1.10.0
+    furo == 2020.11.27b19    
 commands_pre =
 commands =
     sphinx-build -b html docs {posargs:docs/_build/html}
