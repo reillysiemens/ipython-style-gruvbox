@@ -47,8 +47,9 @@ legacy_tox_ini = """
 [tox]
 minversion = 3.14.0
 envlist =
-    py38
-    py39
+    python3.8
+    python3.9
+    python3.10
     static
     docs
 
@@ -103,6 +104,7 @@ commands =
 
 [gh-actions]
 python =
-    3.8: py38, static, docs
-    3.9: py39
+    3.8: python3.8, static, docs
+    3.9: python3.9
+    3.10: python3.10
 """
