@@ -46,6 +46,7 @@ gruvbox = "gruvbox:GruvboxStyle"
 legacy_tox_ini = """
 [tox]
 minversion = 3.14.0
+isolated_build = true
 envlist =
     python3.8
     python3.9
@@ -98,8 +99,8 @@ basepython = python3.9
 deps =
     sphinx ~= 3.3.0
     sphinx-autodoc-typehints ~= 1.10.0
-    furo == 2020.11.27b19    
-commands_pre =
+    furo == 2020.12.30b24
+commands_pre = poetry install
 commands =
     sphinx-build -b html docs {posargs:docs/_build/html}
 
