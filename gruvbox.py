@@ -106,3 +106,56 @@ class GruvboxStyle(Style):
         Text: Color.light1,
         Token.Punctuation: Color.light1,
     }
+
+
+# Register the theme with IPython's theming system (IPython 9.0+)
+def _register_ipython_theme() -> None:
+    """Register the gruvbox theme with IPython's theme_table if available."""
+    try:
+        from IPython.utils.PyColorize import Theme, theme_table
+    except ImportError:
+        # IPython not installed or older version without theme_table
+        return
+
+    # Only register if not already present
+    if "gruvbox" not in theme_table:
+        # Define IPython-specific token colors using gruvbox palette
+        gruvbox_theme = Theme(
+            "gruvbox",
+            "gruvbox",  # Base Pygments style
+            {
+                Token.Lineno: Color.bright_aqua,
+                Token.LinenoEm: f"{Color.bright_aqua} bold",
+                Token.ValEm: f"{Color.neutral_yellow} bold",
+                Token.VName: Color.bright_blue,
+                Token.Caret: "",
+                Token.Filename: Color.light0,
+                Token.FilenameEm: f"{Color.light0} bold",
+                Token.ExcName: f"{Color.bright_red} bold",
+                Token.Topline: Color.neutral_red,
+                Token.Breakpoint.Enabled: Color.bright_red,
+                Token.Breakpoint.Disabled: Color.neutral_red,
+                Token.Prompt: Color.neutral_aqua,
+                Token.PromptNum: f"{Color.bright_aqua} bold",
+                Token.OutPrompt: Color.neutral_purple,
+                Token.OutPromptNum: f"{Color.bright_purple} bold",
+            },
+            symbols={"arrow_body": "\u2500", "arrow_head": "\u25b6", "top_line": "\u2500"},
+        )
+        theme_table["gruvbox"] = gruvbox_theme
+
+
+def load_ipython_extension(ipython: Any) -> None:  # type: ignore
+    """Load the IPython extension.
+    
+    This function is called by IPython when the extension is loaded.
+    Users can load this extension with: %load_ext gruvbox
+    """
+    _register_ipython_theme()
+    # Set the colors to gruvbox if not already set
+    if ipython.colors != "gruvbox":
+        ipython.colors = "gruvbox"
+
+
+# Register the theme when the module is imported
+_register_ipython_theme()

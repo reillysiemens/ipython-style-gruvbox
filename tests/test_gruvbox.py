@@ -138,3 +138,23 @@ def highlight(code: str) -> str:
 def test_highlighting(code: str, expected: str) -> None:
     """The given code should highlight as expected."""
     assert highlight(code) == expected
+
+
+def test_ipython_theme_registration() -> None:
+    """The gruvbox theme should be registered in IPython's theme_table."""
+    try:
+        from IPython.utils.PyColorize import theme_table
+    except ImportError:
+        pytest.skip("IPython not installed")
+
+    # Import the module to trigger registration
+    import gruvbox  # noqa: F401
+
+    # Check that the theme is registered
+    assert "gruvbox" in theme_table, "gruvbox theme should be in theme_table"
+    
+    # Verify the theme has the expected structure
+    theme = theme_table["gruvbox"]
+    assert theme.name == "gruvbox"
+    assert theme.base == "gruvbox"
+    assert len(theme.extra_style) > 0, "Theme should have extra_style tokens"
