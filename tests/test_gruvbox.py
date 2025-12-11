@@ -173,9 +173,8 @@ def test_ipython_theme_registration() -> None:
     except ImportError:
         pytest.skip("IPython not installed")
 
-    # Import the module to trigger registration
-    import gruvbox  # noqa: F401
-
+    # The gruvbox module is already imported at the top of this test file,
+    # which triggers the theme registration
     # Check that the theme is registered
     assert "gruvbox" in theme_table, "gruvbox theme should be in theme_table"
 
