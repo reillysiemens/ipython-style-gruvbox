@@ -34,8 +34,16 @@ def highlight(code: str) -> str:
             "\x1b[38;2;131;165;152mfrom\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;235;219;178mgruvbox\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;131;165;152mimport\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;235;219;178mGruvboxStyle\x1b[39m\n",  # noqa: E501
             id="Keyword.Namespace",
         ),
-        param("None", "\x1b[38;2;254;128;25mNone\x1b[39m\n", id="Keyword.Constant",),
-        param("int", "\x1b[38;2;250;189;47mint\x1b[39m\n", id="Keyword.Type",),
+        param(
+            "None",
+            "\x1b[38;2;254;128;25mNone\x1b[39m\n",
+            id="Keyword.Constant",
+        ),
+        param(
+            "int",
+            "\x1b[38;2;250;189;47mint\x1b[39m\n",
+            id="Keyword.Type",
+        ),
         param(
             "try:\n    pass\nexcept:\n    raise",
             "\x1b[38;2;251;73;52mtry\x1b[39m\x1b[38;2;235;219;178m:\x1b[39m\n\x1b[38;2;235;219;178m    \x1b[39m\x1b[38;2;251;73;52mpass\x1b[39m\n\x1b[38;2;251;73;52mexcept\x1b[39m\x1b[38;2;235;219;178m:\x1b[39m\n\x1b[38;2;235;219;178m    \x1b[39m\x1b[38;2;251;73;52mraise\x1b[39m\n",  # noqa: E501
@@ -82,12 +90,30 @@ def highlight(code: str) -> str:
             id="Name",
         ),
         param(
-            "0b1101001", "\x1b[38;2;211;134;155m0b1101001\x1b[39m\n", id="Number.Bin",
+            "0b1101001",
+            "\x1b[38;2;211;134;155m0b1101001\x1b[39m\n",
+            id="Number.Bin",
         ),
-        param("105.0", "\x1b[38;2;211;134;155m105.0\x1b[39m\n", id="Number.Float",),
-        param("0x69", "\x1b[38;2;211;134;155m0x69\x1b[39m\n", id="Number.Hex",),
-        param("105", "\x1b[38;2;211;134;155m105\x1b[39m\n", id="Number.Integer",),
-        param("0o151", "\x1b[38;2;211;134;155m0o151\x1b[39m\n", id="Number.Oct",),
+        param(
+            "105.0",
+            "\x1b[38;2;211;134;155m105.0\x1b[39m\n",
+            id="Number.Float",
+        ),
+        param(
+            "0x69",
+            "\x1b[38;2;211;134;155m0x69\x1b[39m\n",
+            id="Number.Hex",
+        ),
+        param(
+            "105",
+            "\x1b[38;2;211;134;155m105\x1b[39m\n",
+            id="Number.Integer",
+        ),
+        param(
+            "0o151",
+            "\x1b[38;2;211;134;155m0o151\x1b[39m\n",
+            id="Number.Oct",
+        ),
         param(
             "x is not y and w is (y or z)",
             "\x1b[38;2;235;219;178mx\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;251;73;52mis\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;251;73;52mnot\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;235;219;178my\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;251;73;52mand\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;235;219;178mw\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;251;73;52mis\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;235;219;178m(\x1b[39m\x1b[38;2;235;219;178my\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;251;73;52mor\x1b[39m\x1b[38;2;235;219;178m \x1b[39m\x1b[38;2;235;219;178mz\x1b[39m\x1b[38;2;235;219;178m)\x1b[39m\n",  # noqa: E501
@@ -152,7 +178,7 @@ def test_ipython_theme_registration() -> None:
 
     # Check that the theme is registered
     assert "gruvbox" in theme_table, "gruvbox theme should be in theme_table"
-    
+
     # Verify the theme has the expected structure
     theme = theme_table["gruvbox"]
     assert theme.name == "gruvbox"

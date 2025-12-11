@@ -140,14 +140,18 @@ def _register_ipython_theme() -> None:
                 Token.OutPrompt: Color.neutral_purple,
                 Token.OutPromptNum: f"{Color.bright_purple} bold",
             },
-            symbols={"arrow_body": "\u2500", "arrow_head": "\u25b6", "top_line": "\u2500"},
+            symbols={
+                "arrow_body": "\u2500",
+                "arrow_head": "\u25b6",
+                "top_line": "\u2500",
+            },
         )
         theme_table["gruvbox"] = gruvbox_theme
 
 
 def load_ipython_extension(ipython: Any) -> None:  # type: ignore
     """Load the IPython extension.
-    
+
     This function is called by IPython when the extension is loaded.
     Users can load this extension with: %load_ext gruvbox
     """
