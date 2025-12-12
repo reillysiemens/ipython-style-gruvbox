@@ -60,13 +60,41 @@ Usage
 -----
 
 The style installs itself as a `Pygments plugin`_, so after
-installation you should only need to launch IPython with the ``gruvbox`` style
+installation you should only need to launch IPython with the ``gruvbox`` style.
+
+**For IPython 9.0 and later:**
+
+Load the gruvbox extension to register the theme:
+
+.. code-block:: python
+
+   # In IPython
+   %load_ext gruvbox
+
+or add it to your `IPython config`_:
+
+.. code-block:: python
+
+   config = get_config()
+   config.InteractiveShellApp.extensions = ["gruvbox"]
+
+The extension will automatically set your color scheme to gruvbox. If you want
+to use a different initialization, you can also set the colors manually in your
+config after loading the extension:
+
+.. code-block:: python
+
+   config = get_config()
+   config.InteractiveShellApp.extensions = ["gruvbox"]
+   config.TerminalInteractiveShell.colors = "gruvbox"
+
+**For IPython 8.x and earlier:**
 
 .. code-block:: bash
 
    ipython --TerminalInteractiveShell.highlighting_style=gruvbox
 
-or add it to your `IPython config`_.
+or in your config file:
 
 .. code-block:: python
 
