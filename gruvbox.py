@@ -159,7 +159,3 @@ def load_ipython_extension(ipython: Any) -> None:  # type: ignore
     # Set the colors to gruvbox if not already set
     if hasattr(ipython, "colors") and ipython.colors != "gruvbox":
         ipython.colors = "gruvbox"
-
-
-# Register the theme when the module is imported
-_register_ipython_theme()

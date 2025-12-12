@@ -167,16 +167,23 @@ def test_highlighting(code: str, expected: str) -> None:
 
 
 def test_ipython_theme_registration() -> None:
-    """The gruvbox theme should be registered in IPython's theme_table."""
+    """The gruvbox theme should be registered when the extension is loaded."""
     try:
         from IPython.utils.PyColorize import theme_table
+        import gruvbox
     except ImportError:
         pytest.skip("IPython not installed")
 
-    # The gruvbox module is already imported at the top of this test file,
-    # which triggers the theme registration
-    # Check that the theme is registered
-    assert "gruvbox" in theme_table, "gruvbox theme should be in theme_table"
+    # Initially, the theme should NOT be in theme_table (no side effects on import)
+    assert "gruvbox" not in theme_table, "Theme should not auto-register on import"
+
+    # Manually call the registration function (simulating extension load)
+    gruvbox._register_ipython_theme()
+
+    # Now check that the theme is registered
+    assert (
+        "gruvbox" in theme_table
+    ), "gruvbox theme should be in theme_table after registration"
 
     # Verify the theme has the expected structure
     theme = theme_table["gruvbox"]
